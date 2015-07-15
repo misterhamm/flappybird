@@ -1,0 +1,28 @@
+{
+  "name": "flappybird",
+  "version": "1.0.0",
+  "description": "flappy bird clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misterhamm/flappybird.git"
+  },
+  "keywords": [
+    "game",
+    "flappybird",
+    "clone",
+    "thinkful"
+  ],
+  "author": "Chris Hamm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misterhamm/flappybird/issues"
+  },
+  "homepage": "https://github.com/misterhamm/flappybird#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
