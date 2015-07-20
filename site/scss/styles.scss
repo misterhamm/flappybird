@@ -4,6 +4,8 @@
 $scriptFont: 'Architects Daughter';
 $sansFont: 'Play';
 $center: '0 auto';
+$smallScreen: '650px';
+$mediumScreen: '860px';
 
 
 body {
@@ -16,7 +18,7 @@ body {
 h1, 
 h2 {
     font-family: $scriptFont, $georgia;
-    @include media(650px) {
+    @include media($smallScreen) {
         font-size: 3rem;
     }
 }
@@ -33,7 +35,7 @@ nav {
             display: inline;
             margin: 0 1.5rem;
         }
-        @include media(650px) {
+        @include media($smallScreen) {
             li {
                 margin: 0 2.5rem;
             }
@@ -77,9 +79,16 @@ header {
                 margin: 0;
                 margin-bottom: 2rem;
             }
-            @include media(650px) {
+            @include media($smallScreen) {
                 max-width: 620px;
                 height: auto;
+            }
+        }
+        @include media($mediumScreen){
+            display: inline;
+            li {
+                @include span-columns(4);
+                padding: 0 2rem;
             }
         }
     }
@@ -120,6 +129,56 @@ header {
             background-color: #9D301F;
         }
     }
+}
+
+.button {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 30px;
+  padding-left: 70px;
+  position: relative;
+  background-color:rgb(41,127,184);
+  color:rgb(255,255,255);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  
+  
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true)";zoom:1;
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true);
+
+  -moz-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true);
+}
+
+.button span {
+  position: absolute;
+  left: 0;
+  width: 50px;
+    font-size: 2rem;
+  background-color:rgba(0,0,0,0.5);
+  
+  -webkit-border-top-left-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-right: 1px solid  rgba(0,0,0,0.15);
+}
+
+.button:hover span, .button.active span {
+  background-color:rgb(0,102,26);
+  border-right: 1px solid  rgba(0,0,0,0.3);
 }
 
 footer {
