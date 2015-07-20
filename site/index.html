@@ -11,15 +11,16 @@
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Architects+Daughter|Play' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/styles.css">
     </head>
 
   
-<body>
+<body id="home">
    <nav>
     <ul>
         <li>
-            <a href="#">home</a>
+            <a href="#home">home</a>
         </li>
         <li>
             <a href="#">about</a>
@@ -31,27 +32,27 @@
 </nav>
 
 <header>
-    <h1>Flappy Bird!(clone)</h1>
+    <h1>Swimmy Fish!</h1>
 </header>
 
 <section class="intro">
-    <p>Lorizzle ipsizzle dolorizzle sit ametizzle.</p>
+    <p>"Classics never die.  They just get reincarnated to avoid copyright violations." <br> - Abraham Lincoln, probably -</p>
 </section>
 
 <section class="features">
     <ul>
         <li>
-            <img src="images/screenshot-1.jpg">
+            <img src="img/flappysplash.jpg">
             <h2>It does this!</h2>
             <p>Lorizzle ipsizzle dolorizzle sit ametizzle</p>
         </li>
         <li>
-            <img src="images/screenshot-2.jpg">
+            <img src="img/flappystart.jpg">
             <h2>It does that!</h2>
             <p>Lorizzle ipsizzle dolorizzle sit ametizzle</p>
         </li>
         <li>
-            <img src="images/screenshot-3.jpg">
+            <img src="img/flappy-bird.jpg">
             <h2>Did we mention it does this?</h2>
             <p>Lorizzle ipsizzle dolorizzle sit ametizzle</p>
         </li>
@@ -63,9 +64,36 @@
 </section>
 
 <footer>
-    <div class="social">Twitter, Facebook, and Google+ share buttons</div>
-    <p>More footer stuff. Probably copyrights and links to terms of use and privacy statements.</p>
+<!-- I got these buttons from simplesharebuttons.com -->
+    <div>
+        <ul class="social">
+           <!-- Facebook Button -->
+            <li class="facebook">
+                <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com/html-share-buttons/">
+                    <p>Facebook</p>
+                </a>
+            </li>
+            
+            <!-- Twitter Button -->
+            <li class="twitter">
+                <a href="https://twitter.com/share?url=http://ort.sh/YEREd&amp;text=++HTML+Share+Buttons+&amp;hashtags=fairtoshare&amp;via=fairtoshare">
+                    <p>Twitter</p>
+                </a>
+            </li>
+            
+            <!-- Google+ Button -->
+            <li class="google">
+                <a href="https://plus.google.com/share?url=http://ort.sh/YEREd">
+                    <p>Google+</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>&copy; Chris Hamm 2015</p>
 </footer>
     
 </body>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
+<script src="js/app.js"></script>
 </html>

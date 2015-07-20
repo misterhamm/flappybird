@@ -19,7 +19,7 @@ gulp.task('jshint', function() {
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
-        server: "./app"
+        server: "./site"
     });
 
     gulp.watch("site/scss/*.scss", ['sass']);
@@ -29,8 +29,11 @@ gulp.task('serve', ['sass'], function() {
 // Compile Sass task
 gulp.task('sass', function() {
   return gulp.src('site/scss/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('site/css'));
+    .pipe(sass({
+        includePaths: require('node-bourbon').includePaths,
+        includePaths: require('node-neat').includePaths
+    }))
+    .pipe(gulp.dest('site/css'))
     .pipe(browserSync.stream());
 });
 
