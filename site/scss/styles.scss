@@ -3,17 +3,22 @@
 
 $scriptFont: 'Architects Daughter';
 $sansFont: 'Play';
+$center: '0 auto';
 
 
 body {
     text-align: center;
     font-family: $sansFont, $helvetica;
     list-style: none;
+    width: 100%;
 }
 
 h1, 
 h2 {
     font-family: $scriptFont, $georgia;
+    @include media(650px) {
+        font-size: 3rem;
+    }
 }
 
 a {
@@ -28,6 +33,11 @@ nav {
             display: inline;
             margin: 0 1.5rem;
         }
+        @include media(650px) {
+            li {
+                margin: 0 2.5rem;
+            }
+        }
     }
 }
 
@@ -38,7 +48,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 100%;
-    height: 100px;
+    height: 7rem;
 }
 
 .intro {
@@ -51,9 +61,11 @@ header {
 .features {
     ul {
         padding: 0;
+        list-style: none;
+        display: inline-block;
+        margin: $center;
         li {
             max-width: 100%;
-            margin: 0;
             img {
                 max-width: 100%;
                 height: auto;
@@ -65,22 +77,24 @@ header {
                 margin: 0;
                 margin-bottom: 2rem;
             }
+            @include media(650px) {
+                max-width: 620px;
+                height: auto;
+            }
         }
-    }
-    @include media (720px) {
-        @include span-columns(6);
     }
 }
 
 .social {
+    @include outer-container;
     list-style: none;
-    margin: 0;
+    margin: $center;
     padding: 0;
     a {
         color: #FFF;
     }
     li {
-        @include span-columns(4);
+        @include span-columns(4.184);
         padding: 0;
         margin: 0 !important;
     }
@@ -90,18 +104,28 @@ header {
     }
     .facebook {
         background-color: #293e71;
+        :hover {
+            background-color: #1D2B4F;
+        }
     }
     .twitter {
         background-color: #00a9f1;
+        :hover {
+            background-color: #16076F;
+        }
     }
     .google {
         background-color: #e0452c;
+        :hover {
+            background-color: #9D301F;
+        }
     }
 }
 
 footer {
+    width: 100%;
     p {
-         margin-top: 1rem;
+         padding-top: 5.5rem;
     }
 }
 
