@@ -450,12 +450,32 @@ a {
 nav ul {
   padding: 0;
   margin: 1rem 0; }
+  nav ul a {
+    color: #FFF; }
+    nav ul a :visited {
+      color: #FFF; }
+  nav ul .home {
+    background-color: #018695; }
+  nav ul .about {
+    background-color: #f6b25b; }
+  nav ul .contact {
+    background-color: #02A844; }
   nav ul li {
-    display: inline;
-    margin: 0 1.5rem; }
+    display: inline; }
+    nav ul li button {
+      border-style: none;
+      border-radius: 1rem;
+      height: 3rem;
+      width: 6rem;
+      box-shadow: 0.25rem 0.25rem 0.2rem #606060;
+      font-weight: bold;
+      letter-spacing: 0.1rem; }
   @media screen and (min-width: 650px) {
     nav ul li {
       margin: 0 2.5rem; } }
+  @media screen and (min-width: 860px) {
+    nav ul li {
+      margin: 0 5rem; } }
 
 header {
   color: #FFF;
@@ -474,7 +494,7 @@ header {
   padding: 0;
   list-style: none;
   display: inline-block;
-  margin: "0 auto"; }
+  margin: 0 auto; }
   .features ul li {
     max-width: 100%; }
     .features ul li img {
@@ -502,16 +522,12 @@ header {
           margin-right: 0; } }
 
 .social {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: 100%;
   list-style: none;
-  margin: "0 auto";
+  margin: 0 auto;
+  margin-top: 4rem;
   padding: 0; }
-  .social::after {
-    clear: both;
-    content: "";
-    display: table; }
   .social a {
     color: #FFF; }
   .social li {
@@ -523,9 +539,6 @@ header {
     margin: 0 !important; }
     .social li:last-child {
       margin-right: 0; }
-  .social p {
-    margin: 0;
-    padding: 2rem 0; }
   .social .facebook {
     background-color: #293e71; }
     .social .facebook :hover {
@@ -538,6 +551,9 @@ header {
     background-color: #e0452c; }
     .social .google :hover {
       background-color: #9D301F; }
+  .social p {
+    margin: 0;
+    padding: 2rem 0; }
 
 .button {
   display: inline-block;
@@ -552,6 +568,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 15px;
+  margin-top: 3rem;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
