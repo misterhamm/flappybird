@@ -3,9 +3,9 @@
 
 $scriptFont: 'Architects Daughter';
 $sansFont: 'Play';
-$center: '0 auto';
-$smallScreen: '650px';
-$mediumScreen: '860px';
+$center: 0 auto;
+$smallScreen: 650px;
+$mediumScreen: 860px;
 
 
 body {
@@ -31,13 +31,42 @@ nav {
     ul {
         padding: 0;
         margin: 1rem 0;
+        a {
+            color: #FFF;
+            :visited {
+                color: #FFF;
+            }
+        }
+        .home {
+            background-color: #018695;
+        }
+        .about {
+            background-color: #f6b25b;
+        }
+        .contact {
+            background-color: #02A844;
+        }
         li {
             display: inline;
-            margin: 0 1.5rem;
+            button {
+                border-style: none;
+                border-radius: 1rem;
+                height: 3rem;
+                width: 6rem;
+                box-shadow: 0.25rem 0.25rem 0.2rem #606060;
+                font-weight: bold;
+                letter-spacing: 0.1rem;
+            }
+            
         }
         @include media($smallScreen) {
             li {
                 margin: 0 2.5rem;
+            }
+        }
+        @include media($mediumScreen) {
+            li {
+                margin: 0 5rem;
             }
         }
     }
@@ -95,9 +124,11 @@ header {
 }
 
 .social {
-    @include outer-container;
+    @include fill-parent;
+    max-width: 100%;
     list-style: none;
     margin: $center;
+    margin-top: 4rem;
     padding: 0;
     a {
         color: #FFF;
@@ -106,10 +137,6 @@ header {
         @include span-columns(4.184);
         padding: 0;
         margin: 0 !important;
-    }
-    p {
-        margin: 0;
-        padding: 2rem 0;
     }
     .facebook {
         background-color: #293e71;
@@ -129,6 +156,10 @@ header {
             background-color: #9D301F;
         }
     }
+    p {
+        margin: 0;
+        padding: 2rem 0;
+    }
 }
 
 .button {
@@ -144,6 +175,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 15px;
+    margin-top: 3rem;
   
   
   border-radius: 5px;
